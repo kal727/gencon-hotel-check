@@ -109,7 +109,7 @@ group.add_argument('--connected', dest = 'max_distance', action = 'store_const',
 parser.add_argument('--budget', type = float, metavar = 'PRICE', default = '99999', help = 'max total rate (not counting taxes/fees) that triggers an alert')
 parser.add_argument('--hotel-regex', type = type_regex, metavar = 'PATTERN', default = reCompile('.*'), help = 'regular expression to match hotel name against')
 parser.add_argument('--room-regex', type = type_regex, metavar = 'PATTERN', default = reCompile('.*'), help = 'regular expression to match room against')
-parser.add_argument('--show-all', action = 'store_true', help = 'show all rooms, even if miles away (these rooms never trigger alerts)')
+parser.add_argument('--show-all', action = 'store_true', default='true', help = 'show all rooms, even if miles away (these rooms never trigger alerts)')
 group = parser.add_mutually_exclusive_group()
 group.add_argument('--delay', type = int, default = 1, metavar = 'MINS', help = 'search every MINS minute(s)')
 group.add_argument('--once', action = 'store_true', help = 'search once and exit')
