@@ -269,4 +269,4 @@ while True:
 		print(str(e))
 	if args.once:
 		exit(0)
-	sleep(60 * args.delay)
+	sleep(30)
